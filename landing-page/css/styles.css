@@ -2,9 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 /* IMPORTS */
 
+/*********************/
+/* MOBILE - DEFAULTS */
+/*********************/
+
 html {
     font-size: 16px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Changing the styles of the body */
@@ -18,40 +23,46 @@ main {
     padding: 1em;
 }
 
+/* Adjusting the logo to be the correct size on mobile */
+
 .logo {
     width: 114.73px;
     height: auto;
 }
 
+/* Adjusting the "Scooter" image to be the correct size on mobile. */
+
 .scooter {
     width: 289.23px;
     height: auto;
+    display: block;
+    margin: auto;
 }
 
 h1 {
     font-size: 3.75rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
 }
 
 p, input {
     font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
 }
 
 /* Changing the form styles */
 
+/* Adding drop shadow onto the form box */
 .apply {
     box-shadow: 5px 5px 15px #333131;
     margin: 2em;
     border-radius: 26px;
     padding: 1em;
-    font-family: 'Montserrat', sans-serif;
 }
 
-form p, form a {
+span {
     font-size: 0.875rem;
+}
+
+form p {
+    font-size: 1rem;
 }
 
 .apply h2 {
@@ -61,6 +72,7 @@ form p, form a {
     margin: 0;
 }
 
+/* Removing default border from fields */
 fieldset {
     border: none;
 }
@@ -73,8 +85,11 @@ input {
     border: none;
 }
 
+form input {
+    width: 80%
+}
+
 .agree {
-    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-size: 0.9rem;
 }
@@ -82,8 +97,10 @@ input {
 #terms {
     width: 1.5em;
     height: 1.5em;
+    margin: 0.5em;
 }
 
+/* Creating the coloured button for "Drive with us" on Mobile */
 .submit input {
     background-color: #57EEAB;
     font-weight: bold;
@@ -92,6 +109,8 @@ input {
     font-size: 1.5rem;
 }
 
+
+/* Changing the coilor and style of the link in various states */
 a:link,
 a:visited {
     text-decoration: none;
@@ -109,10 +128,24 @@ footer {
     background-color: #FFFD8C;
     margin: 0;
     padding: 1em;
+    display: block;
 }
 
+form.hours {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#hours {
+    width: 25%;
+}
+
+#city {
+    width: 50%;
+}
+
+/* Changing default h3 size to better match the mobile size */
 footer h3 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 1.125rem;
 }
@@ -121,24 +154,8 @@ footer p {
     font-size: 1rem;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#hours {
-    width: 25%;
-    margin: 0.5rem;
-    padding: 1em;
-}
-
-#city {
-    width: 50%;
-    margin: 0.5rem;
-    padding: 1em;
-}
-
-.caculate input {
+/* Creating the coloured button for "Caculate on mobile */
+.caculate {
     background-color: #FF8480;
     color: #FFF;
     font-weight: bold;
@@ -156,6 +173,164 @@ footer p {
 }
 
 .social {
+    margin: auto;
     display: flex;
     justify-content: space-evenly;
+}
+
+
+
+
+/***************/
+/* TABLET VIEW */
+/***************/
+
+@media (min-width: 768px) {
+    main, .apply {
+        margin: 0 5em 3em 5em;
+    }
+
+    /* Changing Body font sizes for a bigger screen */
+    h1 {
+        font-size: 5rem;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    /* Adjusting position of image for tablet view */
+    .scooter {
+        width: 420.69px;
+        height: auto;
+        padding: 0;
+    }
+    
+    /* Changing form font sizes for a bigger screen */
+    input {
+        font-size: 1.125rem;
+        margin: 1em;
+    }
+    
+    .agree {
+        font-size: 1.11rem;
+    }
+    
+    #terms {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    span {
+        font-size: 1.06rem;
+    }
+
+    form p {
+        font-size: 1.87rem;
+    }
+
+    /* Footer */
+    #hours {
+        width: 10%
+    }
+
+    #city {
+        width: 30%;
+    }
+
+    .caculate {
+        width: 30%;
+        margin: 1em
+    }
+
+    .social {
+        width: 50%;
+    }
+}
+
+/****************/
+/* DESKTOP VIEW */
+/****************/
+
+@media (min-width:1700px) {
+    /* Creating the flex box for the desktop view of the websie */
+    .wrapper {
+        display: flex;
+    }
+
+    /* Moving the logo in to match the text */
+    .logo {
+        margin-left: 8%;
+    }
+
+    .scooter {
+        width: 819.36px;
+        z-index: -1;
+    }
+    /* Creating positions so that the text and form can overlap the scooter image */
+    main {
+        position: absolute;
+        width: 30%;
+        left: 4%;
+    }
+
+    .scooter {
+        display: block;
+    }
+
+    .apply {
+        position: absolute;
+        right: 4%;
+        background-color: white;
+    }
+    /* End of position setting */
+
+    .apply input {
+        margin: 0;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    .footer-input {
+        width: 50%;
+        margin-left: 4%;
+    }
+
+    .social {
+        width: 20%;
+    }
+
+    /* Setting text sizes forDesktop view */
+    span {
+        font-size: 0.93rem;
+    }
+
+    .apply h2 {
+        text-align: left;
+    }
+
+    /* Reordering Social Media Icons to match desktop view */
+    .social {
+        align-items: center;
+        display: flex;
+    }
+
+    #instagram {
+        order: 1;
+    }
+
+    #twitter {
+        order: 2;
+    }
+
+    #facebook {
+        order: 3;
+    }
+
+    #linkedin {
+        order: 4;
+    }
 }

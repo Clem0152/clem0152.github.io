@@ -7,13 +7,17 @@
     <title>Dash</title>
 </head>
 <body>
+<!-- Logo Image -->
+    <img src="img/logo/logo.png" alt="Dash Logo" class="logo">
     <div class="wrapper">
+<!-- Main text on the screen. -->
         <main>
-            <img src="img/logo/logo.png" alt="Dash Logo" class="logo">
             <h1>Want to be your own boss?</h1>
             <p>Start today and make up to $30/hr driving your own vehicle with Dash!</p>
-            <img src="img/bg-image/scooter.svg" alt="Scooter" class="scooter">
         </main>
+        <!-- Scooter Image-->
+        <img src="img/bg-image/scooter.svg" alt="Scooter" class="scooter">
+        <!-- Form Start -->
         <form method="GET" action="index.html" class="apply">
             <h2>Apply Now</h2>
             <p>Enter your info below.</p>
@@ -44,30 +48,41 @@
             </fieldset>
             <fieldset>
                 <div class="submit">
-                    <input type="submit" value="DRIVE WITH US">
+                    <input type="submit" value="DRIVE WITH US" class="button"> 
                 </div>
             </fieldset>
-            <p>Already applied? <a href="#">Check your application status here</a></p>
+            <span>Already applied? <a href="#">Check your application status here</a></span>
         </form>
-        <footer>
+        <!-- Form End -->
+    </div>
+    <!-- Yellow Footer -->
+    <footer>
+        <div class="footer-input">
             <h3>See how much you can earn with Dash.</h3>
             <p>how many hours do you want to drive with us this week?</p>
+            <!-- Footer Form Start -->
             <form method="GET" action="index.html" class="hours">
-                <div class="flex">
-                    <input type="text" name="hours" id="hours" placeholder="Hours">
-                    <input type="text" name="city" id="city" placeholder="City">
-                </div>
-                <div class="caculate">
-                    <input type="submit" value="CACULATE">
-                </div>
+                <input type="text" name="hours" id="hours" placeholder="Hours">
+                <input type="text" name="city" id="city" placeholder="City">
+                <input type="submit" value="CACULATE" class="caculate button">
             </form>
-            <section class="social">
-                <img src="img/icons/facebook.svg" alt="Facebook">
-                <img src="img/icons/instagram.svg" alt="Instagram">
-                <img src="img/icons/twitter.svg" alt="Twitter">
-                <img src="img/icons/linkedin.svg" alt="LinkedIn">
-            </section>
-        </footer>
-    </div>
+            <!-- Footer form end -->
+        </div>
+        <!-- Social Medis Icons. They're all in Div's for the purpose of reordering at various screen sizes -->
+        <div class="social">
+            <div id="facebook">
+                <a href="#"><img src="img/icons/facebook.svg" alt="Facebook"></a>
+            </div>
+            <div id="instagram">
+                <a href="#"><img src="img/icons/instagram.svg" alt="Instagram"></a>
+            </div>
+            <div id="twitter">
+                <a href="#"><img src="img/icons/twitter.svg" alt="Twitter"></a>
+            </div>
+            <div id="linkedin">
+                <a href="#"><img src="img/icons/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+     </footer>
 </body>
 </html>

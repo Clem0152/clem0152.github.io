@@ -1,0 +1,328 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Imports */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ae88c6;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: white;
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    padding-left: 200px;
+}
+
+nav ul li {
+    display: none;
+    padding: 1em;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    text-decoration: none;
+    color: #5F148F;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+#logo img {
+    width: 176px;
+    height: auto;
+    position: absolute;
+    top: 4px;
+    padding-left: 10px;
+    z-index: 9;
+}
+
+#cart img {
+    width: 30px;
+    height: auto;
+}
+
+#cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Setting the default font styles for the website */
+
+h1, h2, h3 {
+    font-family: 'BioRhyme', serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Adjusting the Header Styles */
+
+header img {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid black;
+}
+
+/* Adding styles to the header script */
+
+.headerbox h2 {
+    font-size: 3rem;
+    font-family: 'Pacifico', cursive;
+    color: #008f40;
+    -webkit-text-stroke: 0.001em white;
+    line-height: 2rem;
+}
+
+/* Creating the Header button styles */
+
+.hbutton {
+    background-color: #5f148f;
+    padding: 0.5rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: 100px;
+    font-size: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.headerbox div a:link,
+.headerbox div a:visited {
+    text-decoration: none;
+}
+
+.headerbox div a:hover .hbutton,
+.headerbox div a:active .hbutton {
+    background-color: #8027d6;
+    text-decoration: underline;
+}
+
+/* Setting up boxes */
+
+.box {
+    width: 70%;
+    padding: 1em;
+    background-color: white;
+    margin: 1rem auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.box h1 {
+    margin: 0;
+}
+
+.box p {
+    text-align: left;
+}
+
+.box img {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    border-radius: 20px;
+    border: 3px solid #5f148f;
+}
+
+/* setting up the "About" section */
+
+section {
+    text-align: center;
+    color: white;
+    background-color: #008F40;
+    margin: 50px 0 0;
+}
+
+section h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+section p{
+    margin: 0;
+    font-size: 1.5 rem;
+}
+
+section img {
+    width: 40%;
+    height: auto;
+    margin: 10px auto;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+/* Setting up Footer */
+
+.contact {
+    text-align: center;
+    color: white;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.contact h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#CPartL {
+    display: none;
+}
+
+#CPartR, #CPartL {
+    width: 30%;
+    display: block;
+    margin: auto;
+    padding: 2em;
+}
+
+/* Tablet View */
+
+@media (min-width: 768px) {
+    /* Unhiding the Nav menu */
+    nav ul li {
+        display: flex;
+    }
+
+    /* Changing position of the Header test */
+    
+    .headerbox h2 {
+        font-size: 4rem;
+        line-height: 3rem;
+    }
+    
+    .hbutton {
+        padding: 0.8rem;
+        font-size: 1.3rem;
+        width: 160px;
+    }
+
+    /* Aligning the boxes horizentially */
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 40%;
+    }
+
+    /* Realigning the About section */
+    section {
+        display: flex;
+    }
+
+    section div {
+        margin: auto;
+    }
+
+    section img {
+        width: 25%;
+        margin: 1em 5em 1em 0;
+    }
+
+    /* Making both images appear in the footer */
+
+    footer {
+        display: flex;
+        margin-top: 2em;
+    }
+
+    #CPartL {
+        display: block;
+    }
+
+    #CPartR, #CPartL {
+        width: 40%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    
+    .headerbox h2 {
+        font-size: 3.5rem;
+        line-height: 2rem;
+    }
+    
+    .hbutton {
+        padding: 0.8rem;
+        font-size: 1.3rem;
+        width: 160px;
+    }
+    
+    .boxes {
+        margin: auto;
+        width: 90%;
+        justify-content: space-between;
+    }
+
+    .box {
+        width: 28%;
+        margin: 0.3em;
+    }
+}
+
+/* Adjusting for larger desktop screens */
+
+@media (min-width: 1440px) { 
+    
+    body p, .contact p {
+        font-size: 2rem;
+    }
+
+    h1, h2, h3, .contact h3 {
+        font-size: 3rem;
+    }
+
+    section div h3 {
+        font-size: 3rem;
+    }
+    
+    section div p {
+        font-size: 2rem;
+    }
+
+    section img {
+        width: 15%;
+        height: auto;
+        margin-right: 20%;
+    }
+}

@@ -20,18 +20,20 @@ body {
 nav {
     background-color: white;
     list-style-type: none;
+    height: 310px;
+    text-align: center;
+    margin: auto;
 }
 
 nav ul {
-    display: flex;
+    display: block;
     align-items: center;
     list-style-type: none;
     height: 60px;
-    padding-left: 200px;
+    margin: auto;
 }
 
 nav ul li {
-    display: none;
     padding: 1em;
     font-family: 'Roboto', sans-serif;
 }
@@ -42,7 +44,8 @@ nav ul li a:visited {
 }
 
 nav ul li a:active,
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
     text-decoration: underline;
 }
 
@@ -52,10 +55,13 @@ nav ul li a:hover {
 
 #logo img {
     width: 176px;
-    position: absolute;
-    top: 4px;
     padding-left: 10px;
-    z-index: 9;
+}
+
+/* Creating an animation to let the user know that the logo is clickable */
+#logo img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
 }
 
 #cart {
@@ -133,10 +139,21 @@ p, form {
 
 .inner-container a:hover .hbutton,
 .inner-container a:active .hbutton,
+.inner-container a:focus .hbutton,
 .form-buttons input:hover,
-.form-buttons input:active {
+.form-buttons input:active,
+.form-buttons input:focus {
     background-color: #8027d6;
     text-decoration: underline;
+    transition: background 0.5s;
+}
+
+/* Adding active, click animations */
+
+.inner-container a:active .hbutton,
+.form-buttons input:active {
+    transform: scale(0.9);
+    transition: transform 0.5s;
 }
 
 /* Setting up boxes */
@@ -194,8 +211,10 @@ section a, footer a {
 
 section a:hover h3,
 section a:active h3,
+section a:focus h3,
 footer a:hover h3,
-footer a:active h3, {
+footer a:active h3,
+footer a:focus h3 {
     color: purple;
 }
 
@@ -303,8 +322,26 @@ h4 {
 
 @media (min-width: 768px) {
     /* Unhiding the Nav menu */
+    nav {
+        height: auto;
+        display: flex;
+    }
+    
     nav ul li {
         display: flex;
+    }
+
+    nav ul {
+        padding-left: 200px;
+        display: flex;
+        margin: 0;
+    }
+
+    #logo img {
+        position: absolute;
+        top: 4px;
+        z-index: 9;
+        transition: transform 0.5s;
     }
 
     /* Changing position of the Header test */
@@ -420,6 +457,14 @@ h4 {
     #comment {
         width: 80%;
     }
+
+    /* Cart Animation */
+    #cart a:hover > img,
+    #cart a:focus > img {
+        animation-name: CartZoom;
+        animation-duration: 5s;
+
+    }
 }
 
 /* Adjusting for larger desktop screens */
@@ -452,5 +497,19 @@ h4 {
     .boxes {
         width: 50%;
         margin: auto;
+    }
+}
+
+/***********************
+Cart Animation Keyframes
+************************/
+
+@keyframes CartZoom {
+    10% { 
+        transform: rotate(-45deg);
+    }
+
+    15% {
+        transform: translate(2500px);
     }
 }

@@ -64,17 +64,14 @@ nav ul li a:focus {
     transition: transform 0.5s;
 }
 
-#cart {
-    align-items: flex-end;
-}
-
 #cart img {
     width: 30px;
 }
 
-#cart a {
+ #cart a {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 /* Setting the default font styles for the website */
 

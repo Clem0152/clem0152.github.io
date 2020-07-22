@@ -37,6 +37,7 @@ nav ul li {
 nav ul li a:link,
 nav ul li a:visited {
     color: white;
+    text-decoration: none;
 }
 
 nav ul li a:active,
@@ -62,4 +63,6 @@ nav ul li a:focus {
 #logo {
     display: block;
     margin: auto;
+    vertical-align: middle;
+    padding-top: 100px;
 }

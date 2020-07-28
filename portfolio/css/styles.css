@@ -138,7 +138,8 @@ footer {
     width: 75%
 }
 
-.video {
+.video img, .video figcaption {
     display: block;
+    width: 75%;
     margin: auto;
 }

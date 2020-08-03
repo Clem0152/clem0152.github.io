@@ -142,13 +142,14 @@ h1 {
 
 .btn {
     display: block;
-    margin: auto;
     background-color: var(--red);
     border: 2px solid black;
     margin-top: 1em;
     width: 50%;
     border-radius: 20px;
     font-size: 1.5rem;
+    color: white;
+    margin: 1em auto 1em auto;
 }
 
 a:active img,
@@ -385,4 +386,8 @@ footer {
    .video-row figure:nth-child(2) img, .video-row figure:nth-child(4) img {
     border-radius: 0 20px 20px 0;
    }
+
+   .about img {
+    width: 375px;
+}
 }

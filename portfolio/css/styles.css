@@ -1,17 +1,50 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+/* Imports */
+
+
+/* Setting a variable for the primary colours on the page so that it can be changed aleter if needed */
 :root {
     --red: #A50000;
 }
 
+/* Setting default font-size and setting default margin and padding to 0 */
 * {
     margin: 0;
     padding: 0;
     font-size: 16px;
 }
 
+/* Ensuring that all images display their height automatically */
 img {
     height: auto;
 }
 
+/* Setting up the header Image */
+.img-container {
+    background-image: url(../img/header/header1920.png);
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-bottom: 5px solid black;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+    vertical-align: middle;
+    padding-top: 100px;
+}
+
+.container {
+    padding: 1em;
+    border: 2px solid black;
+}
+
+/* Setting up the Navigation and other links on the page */
 nav {
     background-color: var(--red);
     list-style-type: none;
@@ -46,44 +79,25 @@ nav ul li a:hover,
 nav ul li a:focus,
 .video a:active figcaption,
 .video a:hover figcaption,
-.video a:focus figcaption, 
+.video a:focus figcaption,
 .projects a:active p,
 .projects a:hover p,
 .projects a:focus p {
     text-decoration: underline;
 }
 
+/* Setting a special style for the current page on the Nav bar */
 #current {
     font-weight: bold;
 }
 
-.img-container {
-    background-image: url(../img/header/header1920.png);
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    border-bottom: 5px solid black;
-}
-
-#logo {
-    display: block;
-    margin: auto;
-    vertical-align: middle;
-    padding-top: 100px;
-}
-
-.container {
-    padding: 1em;
-    border: 2px solid black;
-}
-
+/* Setting default styles for the H1's */
 h1 {
     text-align: center;
     font-weight: bold;
 }
 
+/* Style for the bars that divide the various sections of the page */
 .page-break {
     background-color: var(--red);
     height: 41px;
@@ -97,6 +111,7 @@ h1 {
     text-align: center;
 }
 
+/* Creating the styles for the featured examples of web development on the page */
 .web, .solo-photo img, .multi-photo img {
     border: 2px solid black;
     border-radius: 20px;
@@ -116,11 +131,13 @@ h1 {
     padding-top: 0.5em;
 }
 
+/* Setting the font size  for the "Click on Image to see more" sections */
 .container p:nth-child(1) {
     text-align: center;
     font-size: 2rem;
 }
 
+/* Setting up styles for the Photography grid section */
 .solo-photo img, .multi-photo img {
     width: 75%;
     display: block;
@@ -136,6 +153,7 @@ h1 {
     display: none;
 }
 
+/* Style for all of the Buttons on the website */
 .btn {
     display: block;
     background-color: var(--red);
@@ -148,6 +166,8 @@ h1 {
     margin: 1em auto 1em auto;
 }
 
+
+/* Adding an effect to the hover and active sate of all the images */
 a:active img,
 a:hover img,
 a:focus img {
@@ -156,21 +176,14 @@ a:focus img {
 }
 
 .video a:link,
-.video a:visited, 
+.video a:visited,
 .projects a:link,
 .projects a:visited {
     color: black;
     text-decoration: none;
 }
 
-footer {
-    background-color: black;
-    color:white;
-    text-align: center;
-    margin-top: 2em;
-    padding: 1.5em;
-}
-
+/* Setting styles for the featured Video Production examples */
 .video img {
     border: 2px solid black;
     border-radius: 20px;
@@ -193,6 +206,7 @@ footer {
     margin: 1em auto 1em auto;
 }
 
+/* Setting styles for the Education and Experience text boxes */
 .exp {
     padding: 0 2em 0 2em;
 }
@@ -205,6 +219,7 @@ footer {
     font-style: italic;
 }
 
+/* Social media Icons on the Contact page */
 .social a img {
     width: 45px;
     height: 45px;
@@ -220,7 +235,7 @@ footer {
 }
 
 
-/* Contact Form */
+/* Contact Form styles */
  fieldset {
      display: grid;
      grid-template-columns: 1fr;
@@ -243,9 +258,20 @@ footer {
      height: 240px;
  }
 
+ /* Setting styles for the footer */
+footer {
+    background-color: black;
+    color:white;
+    text-align: center;
+    margin-top: 2em;
+    padding: 1.5em;
+}
+
  /* Tablet View */
 
  @media(min-width: 768px)  {
+
+    /* Displaying the navigation horizentally */
      nav ul {
          display: flex;
          justify-content: center;
@@ -264,7 +290,7 @@ footer {
 }
 
      /* Home page - Web Development */
-     
+
      .projects {
         display: grid;
         grid-template-columns: 1fr 1fr;
